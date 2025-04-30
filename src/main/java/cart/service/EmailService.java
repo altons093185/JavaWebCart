@@ -1,6 +1,7 @@
 package cart.service;
 
 import java.util.Properties;
+
 import javax.mail.Message;
 import javax.mail.MessagingException;
 import javax.mail.PasswordAuthentication;
@@ -10,19 +11,19 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
 public class EmailService {
-	
+
 	public static void main(String[] args) {
 		new EmailService().sendEmail("gga99095@gmail.com", "http://localhost:8080/JavaWebCart/");
 	}
-	
+
 	// Google應用程式密碼
 	// 請參考此篇 https://www.yongxin-design.com/Article/10
 	// 請自行產生Google應用程式密碼
-	String googleAppPassword = "dkki fnoj gkme pdnj";
+	String googleAppPassword = "heba djih ttsc chuy";
 
 	// 寄件者的電子郵件地址
-	String from = "vincenttuan@gmail.com";
-	
+	String from = "altons093185@gmail.com";
+
 	// to: // 收件者的電子郵件地址
 	public void sendEmail(String to, String confirmUrl) {
 
@@ -73,5 +74,3 @@ public class EmailService {
 		}
 	}
 }
-
-

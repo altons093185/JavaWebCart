@@ -10,19 +10,19 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
-@WebFilter(urlPatterns = {"/user/list", "/product/list"})
+@WebFilter(urlPatterns = { "/user/list", "/product/*" })
 public class LoginFilter extends HttpFilter {
 
 	@Override
 	protected void doFilter(HttpServletRequest request, HttpServletResponse response, FilterChain chain)
 			throws IOException, ServletException {
-		
+
 		// 根據 session 屬性是否有 userDTO 物件來判斷是否已經登入 ?
 		HttpSession session = request.getSession();
-		if(session.getAttribute("userDTO") == null) {
+		if (session.getAttribute("userDTO") == null) {
 			// 重導到登入頁面
-			//response.sendRedirect("/JavaWebCart/user/login");
-			
+			// response.sendRedirect("/JavaWebCart/user/login");
+
 			// 給 result.jsp 的資訊
 			request.setAttribute("resultTitle", "請先登入");
 			request.setAttribute("resultMessage", "請先登入");
@@ -32,7 +32,7 @@ public class LoginFilter extends HttpFilter {
 			// By pass
 			chain.doFilter(request, response);
 		}
-		
+
 	}
-	
+
 }
