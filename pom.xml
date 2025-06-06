@@ -40,11 +40,7 @@
 		<version>1.18.34</version>
 		<scope>provided</scope>
 	</dependency>
-	<dependency>
-		<groupId>JavaWebOrder</groupId>
-		<artifactId>JavaWebOrder</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
-	</dependency>
+
   </dependencies>
 
   
